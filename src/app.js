@@ -10,18 +10,25 @@ window.onload = function() {
   //console.log("Hello World!");
 /* eslint-disable */
 
-let pronouns = ["the", "our"];
-let adjectives = ["great", "big"];
-let nouns = ["jogger", "racoon"];
+/* eslint-disable */
+window.onload = function() {
+  let pronouns = ["the", "our"];
+  let adjectives = ["great", "big"];
+  let nouns = ["jogger", "racoon"];
 
-function generateDomainNames() {
-  for (let i = 0; i < pronouns.length; i++) {
-    for (let j = 0; j < adjectives.length; j++) {
-      for (let k = 0; k < nouns.length; k++) {
-        let domainName = pronouns[i] + adjectives[j] + nouns[k] + ".com";
-        console.log(domainName);
+  function generateDomainNames() {
+    let outputElement = document.getElementById("output");
+
+    for (let i = 0; i < pronouns.length; i++) {
+      for (let j = 0; j < adjectives.length; j++) {
+        for (let k = 0; k < nouns.length; k++) {
+          let domainName =
+            pronouns[i] + adjectives[j] + nouns[k] + ".com" + ".ie";
+          outputElement.innerHTML += domainName + "<br>";
+        }
       }
     }
   }
-}
-generateDomainNames();
+
+  generateDomainNames();
+};
